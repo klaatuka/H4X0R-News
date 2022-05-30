@@ -11,6 +11,10 @@
 		6BC1BB1C284164E800C99081 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1BB1B284164E800C99081 /* ContentView.swift */; };
 		6BC1BB1E284164E900C99081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1BB1D284164E900C99081 /* Assets.xcassets */; };
 		6BC1BB21284164E900C99081 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1BB20284164E900C99081 /* Preview Assets.xcassets */; };
+		6BC1BB2928416DA000C99081 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1BB2828416DA000C99081 /* NetworkManager.swift */; };
+		6BC1BB2B2842522900C99081 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1BB2A2842522900C99081 /* PostData.swift */; };
+		6BC1BB2E284260A500C99081 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1BB2D284260A500C99081 /* DetailView.swift */; };
+		6BC1BB30284266CD00C99081 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1BB2F284266CD00C99081 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		6BC1BB1B284164E800C99081 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BC1BB1D284164E900C99081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC1BB20284164E900C99081 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6BC1BB2828416DA000C99081 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6BC1BB2A2842522900C99081 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		6BC1BB2D284260A500C99081 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6BC1BB2F284266CD00C99081 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		6BC1BB312842C5AD00C99081 /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		6BC1BB18284164E800C99081 /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				6BC1BB312842C5AD00C99081 /* H4X0R News.entitlements */,
 				6BC1BB19284164E800C99081 /* H4X0R_NewsApp.swift */,
-				6BC1BB1B284164E800C99081 /* ContentView.swift */,
+				6BC1BB2C2842607A00C99081 /* Views */,
+				6BC1BB2728416D7700C99081 /* Models */,
 				6BC1BB1D284164E900C99081 /* Assets.xcassets */,
 				6BC1BB1F284164E900C99081 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				6BC1BB20284164E900C99081 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6BC1BB2728416D7700C99081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1BB2828416DA000C99081 /* NetworkManager.swift */,
+				6BC1BB2A2842522900C99081 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6BC1BB2C2842607A00C99081 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BC1BB1B284164E800C99081 /* ContentView.swift */,
+				6BC1BB2D284260A500C99081 /* DetailView.swift */,
+				6BC1BB2F284266CD00C99081 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC1BB2928416DA000C99081 /* NetworkManager.swift in Sources */,
+				6BC1BB2B2842522900C99081 /* PostData.swift in Sources */,
 				6BC1BB1C284164E800C99081 /* ContentView.swift in Sources */,
+				6BC1BB30284266CD00C99081 /* WebView.swift in Sources */,
+				6BC1BB2E284260A500C99081 /* DetailView.swift in Sources */,
 				6BC1BB1A284164E800C99081 /* H4X0R_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
@@ -282,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.klaatuka.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
@@ -311,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.klaatuka.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
